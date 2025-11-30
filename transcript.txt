@@ -1,0 +1,365 @@
+Hello, team.
+
+Today we start learning spring core.
+
+This is very interesting and important topic that will help you to understand all further lessons about
+
+spring.
+
+Today we are going to have theoretical lesson, but believe me, this is important.
+
+In order you can proceed with learning and understanding of practical examples.
+
+I know that series sometimes may sound boring, but I will try to make it as interesting as possible.
+
+I will not tell you redundant things and I will be as short as possible to share with you only necessary
+
+things.
+
+In this lesson we are going to hold an overview and learn spring framework architecture and you are
+
+going to understand the place of spring core in the general architecture.
+
+We will learn such basic and important concepts as inversion of control and dependency injection.
+
+After that, we are going to talk about spring inversion of control container.
+
+I'm going to review with you key types that we are going to work with while interacting with a spring
+
+container.
+
+I will explain what a spring context is.
+
+Besides that, today we are going to learn super important concept that is called spring beans.
+
+We will learn what is a and we will review the scopes of spring beans.
+
+And at the end of the lesson we'll review what a spring expression language is.
+
+We have a lot of things to learn today.
+
+Let's start our lesson.
+
+Let's start from learning of architecture of Spring framework and understand what is the role and place
+
+of spring core in the general spring architecture like we have learned already in the introduction lesson
+
+about the spring.
+
+Spring framework consists of many different components.
+
+The spring framework comprises several modules and features such as inversion of control, aspect oriented
+
+programming.
+
+DAO Context or Depb MVC.
+
+ET cetera.
+
+We'll learn these modules and features one by one, but there is some basics that lies in the core for
+
+all modules.
+
+I'm talking about core spring inversion of control, container dependency, injection, spring context
+
+and such basic concepts as spring bean.
+
+You can see on this slide where core container is located.
+
+So it is like in basement of the spring framework.
+
+It contains the fundamental modules that are the cornerstone of spring framework.
+
+Core Spring core is a core of the framework that power features such as inversion of control and dependency
+
+injection beans.
+
+Spring Beans provides bean factory which is sophisticated implementation of the factory pattern.
+
+Context.
+
+Spring context builds on core and beans and provides a medium to access defined objects.
+
+Application context interface is the core part of the context module and the spring context.
+
+Support provides support for third party interactions such as caching, mailing and template engines.
+
+Spring Expression Language.
+
+Spring expression enables users to use the spring expression language to query and manipulate the object
+
+graph at runtime.
+
+Before moving to other slides and learning specifics of spring.
+
+Let's understand such core concepts as inversion of control and dependency injection.
+
+IOC inverts the flow of control as compared to traditional control flow.
+
+In traditional programming, the flow of the business logic is determined by objects that are statically
+
+bound to one another.
+
+This inversion of control the flow depends on the object graph that is built up during program execution.
+
+Such a dynamic flow is made possible by object interactions that are defined through abstractions.
+
+This runtime binding is achieved by mechanisms such as dependency, injection or service locator in
+
+IOC.
+
+The code could also be linked statically during compilation, but you will find that to execute the
+
+code, the external configuration will be used to build object graph and manage all the dependencies
+
+so you already can understand that dependency injection is just one of the possible ways how we can
+
+implement inversion of control.
+
+Dependency injection is a pattern we can use to implement IOC where the control being inverted is set
+
+in an object's dependencies.
+
+Connecting objects with other objects or injecting objects into other objects is done by an assembler
+
+rather than by the objects themselves.
+
+There are three main ways in which a client can receive injected services.
+
+Constructor injection where dependencies are provided through a client class constructor.
+
+Setter injection where the client exposes a setter method which accepts the dependency interface injection
+
+where the dependencies interface provides an injector method that will inject the dependency into any
+
+client passed to it.
+
+Okay.
+
+Now when we have learned what an inversion of control and dependency injections are.
+
+Let's understand now what a spring IOC container is.
+
+The IOC container is responsible to instantiate, configure and assemble the objects.
+
+The IOC container gets information from the XML file or Java annotations and works accordingly.
+
+The main tasks performed by IOC Container are to instantiate the application class to configure the
+
+object to assemble the dependencies between the objects.
+
+Spring IOC is a mechanism to achieve loose coupling between objects dependencies to achieve loose coupling.
+
+And dynamic binding of the objects at runtime objects, dependencies are injected by other assembler
+
+objects.
+
+Spring IOC Container is a program that injects dependencies into an object and make it ready for our
+
+use.
+
+In other words, with a spring IOC, we have entity in our program that is in charge of the life cycle
+
+of our objects and dependencies between them.
+
+We can manage our dependencies between objects directly in the configuration files.
+
+Let's review the key interfaces and types that are in charge of spring inversion of Control container.
+
+Spring IAC Container provides us different ways to decouple the object dependencies.
+
+Bean factory is the root interface of spring IOC container.
+
+Application context is a child interface of bean factory interface.
+
+Some of the useful child interfaces of application contexts are configurable application context and
+
+web application context.
+
+Spring Framework provides a number of useful application context implementation classes that we can
+
+use to get the spring context and then the spring bean.
+
+Some of the useful application context implementations is that we use are annotation config application
+
+context.
+
+If we are using spring in standalone Java applications and using annotations for configuration, then
+
+we can use this to initialize the container and get the bean objects.
+
+Classpath XML application context.
+
+If we have spring bean configuration XML file in standalone application, then we can use this class
+
+to load the file and get the container object.
+
+File system.
+
+XML application context.
+
+This is similar to classpath.
+
+XML application context, except that the XML configuration file can be loaded from anywhere in the
+
+file system.
+
+Annotation config web application context, an XML web application context for web applications for
+
+a standalone application, we need to initialize the container somewhere in the application and then
+
+use it to get the spring beans.
+
+We mentioned spring context on previous slides.
+
+Let me now explain you what it is.
+
+The context in the spring framework is shorthand for application context type and its child types.
+
+Spring context is a programming construct that framework uses to access components from the inversion
+
+of control container where they are cache.
+
+Linguistically.
+
+Context is a vague term for the abstract set of circumstances in which an event occurs.
+
+However, in the context of the spring framework, the application context is well defined and understood
+
+by framework users as a state of the IOC container from which a component has been produced via dependency
+
+injection.
+
+Hope that this is clear now.
+
+Also during the course were often we are going to use such term as spring bean.
+
+Let's understand.
+
+What is it?
+
+Spring bean is nothing special.
+
+Any object in the spring framework that we initialize through spring container is called Spring Bean.
+
+Any normal Java project class can be a spring bean.
+
+It is configured to be initialized with a container by providing configuration metadata information.
+
+Each bean in spring container has its own scope.
+
+What is bean scope?
+
+Bean scopes refers to the lifecycle of bean.
+
+That means when the object of bean will be instantiated, how long does the object leave and how many
+
+objects will be created for that bean sprout?
+
+Basically, it controls the instance creation of the bean and it is managed by the spring container.
+
+There are five scopes defined for spring beans Singleton.
+
+Only one instance of the bean will be created for each container.
+
+This is the default scope for the spring beans.
+
+While using this scope, make sure Bean doesn't have shared instance variables.
+
+Otherwise it might lead to data inconsistency issues.
+
+Prototype.
+
+A new instance will be created every time the bean is requested.
+
+Request.
+
+This is the same as prototype scope.
+
+However, it's meant to be used for web applications and new instance of the bin will be created for
+
+each HTTP request.
+
+Session.
+
+A new bill will be created for each HTTP session by the container.
+
+Application scope container creates one instance per web application runtime.
+
+It is almost similar to singleton scope with only two differences.
+
+That is.
+
+Application scoped bean is singleton per served context, whereas Singleton scoped.
+
+Bean is singleton per application context.
+
+Please note that there can be multiple application contexts for a single application.
+
+Application scoped bean is visible as a servlet context attribute.
+
+WebSocket.
+
+WebSocket scoped beans are stored in the websocket session attributes.
+
+The same instance of the bean is then returned whenever the bean is accessed during the entire WebSocket
+
+session.
+
+Spring framework is extendable and we can create our own scopes too.
+
+However, most of the times we are good with the scopes provided by the framework.
+
+And the last but not the least, that I would like to talk about today is spring expression language.
+
+It is an extension to the expression language defined in JSP.
+
+It provides support to setting and getting property values.
+
+Method Invocation.
+
+Access and collection.
+
+And indexers.
+
+Named Variables.
+
+Logical and Arithmetic Operators.
+
+Retrieval of objects by name, etcetera.
+
+The spring expression language is a powerful expression language that supports querying and manipulating
+
+an object graph at runtime.
+
+We can use it with XML or annotation based spring configurations.
+
+That's all what I wanted to share with you today.
+
+Let's recap what we have learned in the lesson.
+
+In this lesson, we have learned how spring framework architecture looks like.
+
+We learned what an inversion of control is and what a dependency injection is and how they are different.
+
+We talked about inversion of control container in spring and reviewed key types that we are going to
+
+work with while interacting with Container in spring.
+
+I explained to you what a spring context is.
+
+Also, we have learned such important concepts as spring beans and reviewed spring beans scopes.
+
+And at the end of the lesson we talked about spring expression language.
+
+That's it for this lesson.
+
+It is important you learn concepts from this lesson in order to be able to proceed with practical examples
+
+and understand them well.
+
+Thanks a lot for your attention.
+
+Have a great day and see you in the next lesson.
+
+
